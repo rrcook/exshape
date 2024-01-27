@@ -27,7 +27,7 @@ Stream.each(lake_shapes, &IO.inspect/1) |> Stream.run
 
 ### Shapes from a SHP byte stream
 ```elixir
-File.stream!("rivers.shp", [], 2048)
+File.stream!("rivers.shp", 2048, [])
 |> Exshape.Shp.read
 |> Stream.each(&IO.inspect/1)
 |> Stream.run
@@ -35,7 +35,7 @@ File.stream!("rivers.shp", [], 2048)
 
 ### Attributes from a DBF byte stream
 ```elixir
-File.stream!("rivers.dbf", [], 2048)
+File.stream!("rivers.dbf", 2048, [])
 |> Exshape.Dbf.read
 |> Stream.each(&IO.inspect/1)
 |> Stream.run

@@ -4,8 +4,8 @@ defmodule Exshape.Mixfile do
   def project do
     [
       app: :exshape,
-      version: "2.2.7",
-      elixir: "~> 1.5",
+      version: "2.2.8",
+      elixir: "~> 1.16",
       description: description(),
       package: package(),
       build_embedded: Mix.env() == :prod,
@@ -48,7 +48,7 @@ defmodule Exshape.Mixfile do
   defp deps do
     [
       {:ex_doc, ">= 0.0.0", only: :dev},
-      {:poison, "~> 3.1", only: :test}
+      {:poison, "~> 5.0.0", only: :test}
     ]
   end
 end
