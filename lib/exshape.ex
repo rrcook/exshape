@@ -6,7 +6,7 @@ defmodule Exshape do
   """
   alias Exshape.{Dbf, Shp}
 
-  defp open_file(c, size), do: File.stream!(c, [], size)
+  defp open_file(c, size), do: File.stream!(c, size, [])
 
   defp zip(nil, nil), do: []
   defp zip(nil, d), do: Dbf.read(d)
