@@ -749,7 +749,7 @@ defmodule Exshape.Shp do
     Read geometry features from a byte stream
 
     ```
-      File.stream!("rivers.shp", [], 2048)
+      File.stream!("rivers.shp", 2048, [])
       |> Exshape.Shp.read
       |> Stream.run
     ```
