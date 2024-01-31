@@ -221,7 +221,7 @@ defmodule Exshape.Dbf do
     Example
 
     ```
-    File.stream!("rivers.dbf", [], 2048)
+    File.stream!("rivers.dbf", 2048, [])
     |> Exshape.Dbf.read
     |> Stream.each(&IO.inspect/1)
     |> Stream.run
